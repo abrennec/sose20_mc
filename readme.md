@@ -10,33 +10,40 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 --- 
 
+Welcome to the summer term workshop on music computing with SonicPi:
+
+- [1. Purpose of the Course](#1-purpose-of-the-course)
+  - [1.1. Objectives](#11-objectives)
+  - [1.2. Resources](#12-resources)
+- [2. Overview of the Workshop](#2-overview-of-the-workshop)
 
 
-Welcome to the summer term workshop on music computing with SonicPi.
-
-
-# Purpose of the Course
+# 1. Purpose of the Course
 
 This course builds on the concepts presented in ‘Theoretical Background of Audio and Graphics’ and introduces the software development toolkit ‘SonicPi’ for music computing. We will start with an exploration of the SonicPi IDE and its programming language Ruby. Then we will look into the relevant audio programming concepts that SonicPi implements as well as the musical concepts and capabilites for live music making supported by the toolkit. In this context, we will also look into the different musical genres that can be created using SonicPi. Last but not least we will explore different application scenarios for music computing and live music coding.
 
-## Specific Objectives
+## 1.1. Objectives
 
-- Getting to know the concept of music computing with SonicPi in Ruby
-- Creating an individual piece of music through programming
+- Getting to know the concept of music computing with SonicPi 
+- Understanding music computing and music theory
 - Understanding the difference between music, sound / synths, and composition
-- Understanding the basic software components of Sonic Pi
+- Understanding the basic software components of Sonic Pi that build on SuperCollider 
+- Creating an individual piece of music through programming
 
-## Resources
+## 1.2. Resources
 
-- Given during the workshop.
-- We will use GitHub to exchange course materials.
-- All participants are required to download the latest version of SonicPi at https://sonic-pi.net
+We will use Github to share communications and materials. For this course, you will need monitor speakers or headphones. Please also  download the following software package and documentation:
+
+- [Sonic Pi](https://sonic-pi.net/)
+- [Sonic Pi Book](https://www.raspberrypi.org/magpi-issues/Essentials_Sonic_Pi-v1.pdf)
+<!-- - [SuperCollider](https://supercollider.github.io)
+- Jack Audio Kit -->
 
 
-# Overview of the Workshop
+# 2. Overview of the Workshop
 
-1) Setup and Important Notes
-2) Introduction to SonicPi
+1) [Important Notes](scripts/01_important_notes.md)
+2) [Introduction to SonicPi](scripts/02_intro.md)
 
 <!-- - 3 Std waren zu lang, Kinder waren am Ende KO
 - Melodie bauen hat gut funktioniert, auch das Bauen eines Beats, aber als 2 separate Einheiten; eigentlich hätte es gereicht, wenn ein Teil der Kinder weiter an ihrer Melodie hätte feilen können und ein paar andere Kinder hätten gerne noch neue Sachen dazugelernt
