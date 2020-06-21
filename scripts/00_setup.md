@@ -10,27 +10,37 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 --- 
 
-# Take Care of your Ears
+# Setup and Important Notes
+
+## Requirements 
+
+For this course, you will need monitor speakers or headphones and the following software applications:
+
+- [Sonic Pi](https://sonic-pi.net/)
+- [SuperCollider](https://supercollider.github.io)
+- Jack Audio Kit
+
+## Take Care of your Ears
 
 When working with sound and audio equipment, please be specifically carefuly of your ears. Your hearing capabilities are extremeley important and must not get hurt!
 
-## Hearing Organ
+### Hearing Organ
 
 The following illustration represents your hearing organ.
 
-![BasicEarStructure](assets/basic-structure-of-the-ear.png)  
+![BasicEarStructure](../assets/basic-structure-of-the-ear.png)  
 *Image source: https://eschooltoday.com/science/the-five-senses/the-sense-of-hearing.html*
 
 This [interactive ear guide](https://www.amplifon.com/uk/interactive-ear/index.html) illustrates the organic hearing process.
 
-## Hearing Damage
+### Hearing Damage
 
 If the sound waves that hit your ear drum are too loud, your inner ear and in particular the hair cells of the cochlea, can be damaged. The following images show functioning and damaged hair cells. 
 
-![hair_cells_01](assets/hair_cells_01.png)  
+![hair_cells_01](../assets/hair_cells_01.png)  
 *Image source unknown.*
 
-![hair_cells_02](assets/hair_cells_02.png)  
+![hair_cells_02](../assets/hair_cells_02.png)  
 *Image source unknown.*
 
 Apart from the hair cells, loud noise that is too loud can also damage your ear drum and ossicles. Therefore, please turn down the volume and be very careful of your ears!
