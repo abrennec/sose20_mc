@@ -250,9 +250,6 @@ Checkout the first example folder in the code folder for your first practical ex
 Open Sonic Pi and play with the introduced commands to playback notes, chords, and simply loops.
 
 #### Exercise 2
-Now listen to the added songs and open the corresponding Sonic Pi file. Try to finalize the main melodies.
-
-#### Exercise 3
 To make the melodies a bit more interesting, change the playback rate by using "**use_bpm**" and set it to 130
  
 ```ruby
@@ -266,14 +263,14 @@ sleep 0.25
 play A3      # == 57
 
 ```
-#### Exercise 4
+#### Exercise 3
 Try to change the sound of the synth you use by adding the "use_synth" command and check out this code example:
 
 ```ruby
 
 use_synth :chipbass
 
-8.times do
+4.times do
   
   play (scale :c3, :minor).tick
   sleep 0.25
@@ -285,3 +282,16 @@ Here, you can also use the "scale" command in conjunction with a specific root n
 - the "scale" command
 - the "ring" data structure and finally
 - the "tick" command 
+
+#### Exercise 4
+
+Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
+
+#### Exercise 5
+
+Pick a song that you like that has a decisive melody and try to figure our the sequence of notes. To figure out the very first (or all) note(s), use this [piano](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html) or this [piano](https://www.apronus.com/music/flashpiano.htm).
+
+Here are some further examples:
+
+- Twinkle, twinkle, little star (starts with "Db4")
+- 
