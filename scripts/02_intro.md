@@ -29,7 +29,6 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Exercise 2](#exercise-2)
   - [Exercise 3](#exercise-3)
   - [Exercise 4](#exercise-4)
-  - [Exercise 5](#exercise-5)
 
 
 # What is Computer Music?
@@ -401,9 +400,7 @@ Pick a song that you like that has a decisive melody and try to figure our the s
 Here are some further examples:
 
 - Twinkle, twinkle, little star (starts with "Db4")
-- Hänschen klein (starts with "")
-- 
-
-## Exercise 5
+- [Hänschen klein](https://www.lieder-archiv.de/haenschen_klein-notenblatt_300727.html) (starts with "C4")
+- [The White Stripes](https://www.youtube.com/watch?v=0J2QdDbelmY) (starts with "E3")
 
 Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
