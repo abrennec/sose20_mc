@@ -15,21 +15,21 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Interface](#interface)
   - [Play Command](#play-command)
   - [MIDI Notes vs Note Names](#midi-notes-vs-note-names)
-  - [Melody, Chords and Songs](#melody-chords-and-songs)
-    - [Scales](#scales)
-    - [Melody](#melody)
-    - [Chords](#chords)
-    - [Songs](#songs)
-    - [Notes on Ruby an Sonic Pi](#notes-on-ruby-an-sonic-pi)
-      - [Symbols / Colon variables](#symbols--colon-variables)
-      - [Data Structures](#data-structures)
-      - [Methods](#methods)
-    - [Practical Exercises](#practical-exercises)
-      - [Exercise 1](#exercise-1)
-      - [Exercise 2](#exercise-2)
-      - [Exercise 3](#exercise-3)
-      - [Exercise 4](#exercise-4)
-      - [Exercise 5](#exercise-5)
+- [Melody, Chords and Songs](#melody-chords-and-songs)
+  - [Scales](#scales)
+  - [Melody](#melody)
+  - [Chords](#chords)
+  - [Songs](#songs)
+- [Notes on Ruby an Sonic Pi](#notes-on-ruby-an-sonic-pi)
+  - [Symbols / Colon variables](#symbols--colon-variables)
+  - [Data Structures](#data-structures)
+  - [Methods](#methods)
+- [Practical Exercises](#practical-exercises)
+  - [Exercise 1](#exercise-1)
+  - [Exercise 2](#exercise-2)
+  - [Exercise 3](#exercise-3)
+  - [Exercise 4](#exercise-4)
+  - [Exercise 5](#exercise-5)
 
 
 # What is Computer Music?
@@ -117,11 +117,11 @@ print mynote
 
 ```
 
-## Melody, Chords and Songs
+# Melody, Chords and Songs
 
 Music is strongly based on the harmonic (or disharmonic) interplay of **melody** and **chords**. Melody and chords are usually closely related through **scales**. 
 
-### Scales 
+## Scales 
 
 **A scale** is an ordered sequence of tones, the ordering being determined by the scale. In this context, it is important to understand the notion of an interval. 
 An interval is the "distance" or "difference" between two tones or to be more precise the ratio of their frequencies. The octacve is a natural interval that forms the basis of the musical system. Tones that are an octave apart sound equivalent but at a different pitch. All tones within the range of one octave are the basis for any kind of scale. 
@@ -152,7 +152,7 @@ puts scale_names
 
  Let's find out with an [interactive example](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html).
 
-### Melody
+## Melody
 
 **Melodies** are often based on a certain scale but can be any kind of sequence of single notes.
 
@@ -166,7 +166,7 @@ play A3      # == 57
 
 ```
 
-### Chords
+## Chords
 
 **Chords** are combinations of notes played back at the same time or - also - in a sequential form as an **arpeggio** or **broken chord**. Chords are built based on the individual notes of a specific scale, for example, the major scale or the minor scale. A chord is then built by simply stacking notes on top of each other in thirds:
 
@@ -237,7 +237,7 @@ See also
 - [tutorial (youtube)](https://www.youtube.com/watch?v=QoeS_fgA2Jw&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=7)
 
 
-### Songs
+## Songs
 
 **Songs** - as you will know - are simple or more complex compositions that often use melodies, chords and rythmic elements like beats that follow a specific of free-floating structure. In Western pop music, you will often find these types of components in a song:
 
@@ -286,9 +286,9 @@ verse()
 
 ```
 
-### Notes on Ruby an Sonic Pi 
+# Notes on Ruby an Sonic Pi 
 
-#### Symbols / Colon variables
+## Symbols / Colon variables
 
 [Ruby symbols](https://prismoskills.appspot.com/lessons/Ruby_by_example/Chapter_05_-_Colon_variable_in_Ruby.jsp) that use a colon in front of the variable name are used frequently in Sonic pi. These types of variables are similar to the enum type in C++. They cannot be assigned a value but rather they are like an enum constant. In Sonic Pi, symbols are used, for example, as hash keys that can be used to invoke a specific pattern or MIDI note:
 
@@ -300,11 +300,11 @@ play (scale :c3, :major)
 
 ```
 
-#### Data Structures
+## Data Structures
 
 Check the ruby code examples for how to create and use **an array** and a **hash data** structure. In Sonic pi, these are complemented with the **ring** structure. Check out [the documentation for the data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi and look into the ring data structure in particular.
 
-#### Methods 
+## Methods 
 
 A typical ruby method with parameters:
 ```ruby
@@ -333,11 +333,11 @@ def hello
 end
 ```
 
-### Practical Exercises
+# Practical Exercises
 
 Check out some of the Sonic Pi examples in the first session folder in the code folder.
 
-#### Exercise 1
+## Exercise 1
 Open Sonic Pi and play with the introduced commands to playback notes, chords, and simple loops. Also, check out the documentation and in particular the following commands:
 
 - clear
@@ -360,7 +360,7 @@ play_pattern [56, 67, 89]
 ```
 See also the [section on data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi.
 
-#### Exercise 2
+## Exercise 2
 
 Now try to work with chords and chord progressions. Check out the common chord progressions in major and minor from [this site](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html) and create a loop for each chord progression. How do you perceive the different progressions?
  
@@ -374,7 +374,7 @@ loop do
 end
 
 ```
-#### Exercise 3
+## Exercise 3
 Try to change the sound of the synth you use by adding the "use_synth" command and check out this code example:
 
 ```ruby
@@ -394,7 +394,7 @@ Here, you can also use the "scale" command in conjunction with a specific root n
 - the "ring" data structure and finally
 - the "tick" command 
 
-#### Exercise 4
+## Exercise 4
 
 Pick a song that you like that has a decisive melody and try to figure our the sequence of notes. To figure out the very first (or all) note(s), use this [piano](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html) or this [piano](https://www.apronus.com/music/flashpiano.htm).
 
@@ -404,6 +404,6 @@ Here are some further examples:
 - Hänschen klein (starts with "")
 - 
 
-#### Exercise 5
+## Exercise 5
 
 Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
