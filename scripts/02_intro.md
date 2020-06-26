@@ -21,6 +21,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
     - [Chords](#chords)
     - [Songs](#songs)
     - [Notes on Ruby an Sonic Pi](#notes-on-ruby-an-sonic-pi)
+      - [Symbols / Colon variables](#symbols--colon-variables)
       - [Data Structures](#data-structures)
       - [Methods](#methods)
     - [Practical Exercises](#practical-exercises)
@@ -287,6 +288,18 @@ verse()
 
 ### Notes on Ruby an Sonic Pi 
 
+#### Symbols / Colon variables
+
+[Ruby symbols](https://prismoskills.appspot.com/lessons/Ruby_by_example/Chapter_05_-_Colon_variable_in_Ruby.jsp) that use a colon in front of the variable name are used frequently in Sonic pi. These types of variables are similar to the enum type in C++. They cannot be assigned a value but rather they are like an enum constant. In Sonic Pi, symbols are used, for example, as hash keys that can be used to invoke a specific pattern or MIDI note:
+
+```ruby
+
+play :D4 #=> a symbol that will invoke the playback of MIDI note 62
+sleep 0.25
+play (scale :c3, :major) 
+
+```
+
 #### Data Structures
 
 Check the ruby code examples for how to create and use **an array** and a **hash data** structure. In Sonic pi, these are complemented with the **ring** structure. Check out [the documentation for the data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi and look into the ring data structure in particular.
@@ -334,6 +347,18 @@ Open Sonic Pi and play with the introduced commands to playback notes, chords, a
 - use_bpm
 
 Try to create a few melodies using one or more of these function calls.
+
+For example:
+```ruby
+
+use_bpm 130
+
+play_pattern (ring 56, 67, 89)
+# or
+play_pattern [56, 67, 89]
+
+```
+See also the [section on data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi.
 
 #### Exercise 2
 
