@@ -39,8 +39,6 @@ We will use Github to share communications and materials. For this course, you w
 - [Sonic Pi Tutorial (the documentation that comes with the software)](https://sonic-pi.net/tutorial.html)
 - [Sonic Pi Book](https://www.raspberrypi.org/magpi-issues/Essentials_Sonic_Pi-v1.pdf)
 - [mehackit Tutorial](https://sonic-pi.mehackit.org)
-<!-- - [SuperCollider](https://supercollider.github.io)
-- Jack Audio Kit -->
 
 
 # 2. Overview of the Workshop

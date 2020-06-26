@@ -10,18 +10,33 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 --- 
 
+- [What is Computer Music?](#what-is-computer-music)
+- [Introduction to Sonic Pi](#introduction-to-sonic-pi)
+  - [Interface](#interface)
+  - [Play Command](#play-command)
+  - [MIDI Notes vs Note Names](#midi-notes-vs-note-names)
+  - [Melody, Chords and Songs](#melody-chords-and-songs)
+    - [Scales](#scales)
+    - [Melody](#melody)
+    - [Chords](#chords)
+    - [Songs](#songs)
+    - [Notes on Ruby an Sonic Pi](#notes-on-ruby-an-sonic-pi)
+      - [Data Structures](#data-structures)
+      - [Methods](#methods)
+    - [Practical Exercises](#practical-exercises)
+      - [Exercise 1](#exercise-1)
+      - [Exercise 2](#exercise-2)
+      - [Exercise 3](#exercise-3)
+      - [Exercise 4](#exercise-4)
+      - [Exercise 5](#exercise-5)
 
-# Introduction
 
-   1) What is Computer Music?
-   2) Introduction to SonicPi
-   3) Melody, Chord, Songs
+# What is Computer Music?
 
-## What is Computer Music?
+<!-- - [SuperCollider](https://supercollider.github.io)
+- Jack Audio Kit -->
 
-
-
-## Introduction to Sonic Pi
+# Introduction to Sonic Pi
 
 According to [mehackit](http://sonic-pi.mehackit.org/exercises/en/01-introduction/01-introduction.html), 
 
@@ -32,7 +47,7 @@ Sonic Pi has been developed for kids to learn how to program as well as to get a
 Sonic Pi is based on the [ruby language](https://ruby-doc.org). You can use ruby to code your music. Find the most fundamental ruby functions in the accompanied [code folder](../code/ruby_language_nutshell/).
 
 
-### Interface
+## Interface
 
 - User interface 
 - Editor windows
@@ -42,7 +57,7 @@ Sonic Pi is based on the [ruby language](https://ruby-doc.org). You can use ruby
 Learn the [Sonic Pi shortcuts](https://sonic-pi.net/tutorial.html#section-B-1) to be more efficient.
 
 
-### Play Command
+## Play Command
 
 - "play" command
   - Play a note at a time
@@ -54,12 +69,13 @@ Learn the [Sonic Pi shortcuts](https://sonic-pi.net/tutorial.html#section-B-1) t
 
 See also this [tutorial](https://www.youtube.com/watch?v=DkbEWmg6oI0&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=2).
 
-#### MIDI Notes vs Letter Name Notes
+## MIDI Notes vs Note Names
 
-MIDI notes range from 0 to 127 and represent classical letter  names used for musical notes as depicted here:
+[MIDI notes](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies) range from 0 to 127 and represent classical letter  names used for musical notes as depicted here:
 
 ![midi notes](../assets/midi_notes.png)
 *Image source: https://sonic-pi.mehackit.org/exercises/en/01-introduction/02-play-a-melody.html*
+
 
 
 ```ruby
@@ -106,23 +122,32 @@ Music is strongly based on the harmonic (or disharmonic) interplay of **melody**
 
 ### Scales 
 
-**A scale** is a specific sequence of notes or, to be more precise, note intervals. An interval is the distance between two notes:
-
-1) Root note
-2) Second
-3) Third (tertian)
-4) Fourth
-5) Fifth 
-6) Sixth 
-7) Seventh
-8) Eigth or octave
-
-
+**A scale** is an ordered sequence of tones, the ordering being determined by the scale. In this context, it is important to understand the notion of an interval. 
+An interval is the "distance" or "difference" between two tones or to be more precise the ratio of their frequencies. The octacve is a natural interval that forms the basis of the musical system. Tones that are an octave apart sound equivalent but at a different pitch. All tones within the range of one octave are the basis for any kind of scale. 
 Most prominent examples of scales in Western music are 
 
 - Major scale (major third and major seventh)
 - Minor scale (minor third and minor seventh)
 
+The different intervals are listed below:
+
+1) Root (unison)
+2) Second (minor, major)
+3) Third (minor, major)
+4) Fourth
+5) Fifth 
+6) Sixth (minor, major)
+7) Seventh (minor, major)
+8) Octave
+
+
+In ruby, print all scale names with this command:
+
+```ruby
+
+puts scale_names
+
+```
 
  Let's find out with an [interactive example](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html).
 
@@ -144,7 +169,7 @@ play A3      # == 57
 
 **Chords** are combinations of notes played back at the same time or - also - in a sequential form as an **arpeggio** or **broken chord**. Chords are built based on the individual notes of a specific scale, for example, the major scale or the minor scale. A chord is then built by simply stacking notes on top of each other in thirds:
 
-- Root note 1
+- Root  1
 - Third 3
 - Fifth 5
 
@@ -157,6 +182,9 @@ Chords can then be further extended with
 
 If you talk about chords in the context of scales, you usually do not refer to the scale of the chord but rather in which key it is, i.e., **major key** or **minor key**. 
 
+- Major chord: 1, 3, 5
+- Minor chord: 1, b3, 5 (contains a minor third)
+
 ```ruby
 
 play 60      # == C4
@@ -167,13 +195,20 @@ play 67      # == G4
 
 ```ruby
 
-play chord(:D, minor)
+play chord(:D, :minor) # method call of the method "chord"
 sleep 0.25
-play chord(:A5, major)
+play chord(:A5, :major)
+
+puts chord_names 
 
 ```
 
-**Chord progressions** are commonly (or uncommonly) used sequences of chords that can make up a song. These are often repeated. To achieve this programmatically, you can use loops in Sonic Pi.
+**Chord progressions** are commonly (or uncommonly) used sequences of chords that can make up a song. In Western music, there are certain chord progressions that are used very often because they create an interplay of tension and release that is particularly well perceived. 
+
+[Here are some popular progressions listed.](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html)
+
+
+To create a repeating pattern of chords or single notes, you can use loops in Sonic Pi.
 
 ```ruby
 
@@ -182,15 +217,23 @@ play chord(:A5, major)
     play :C4
     sleep 0.25
   end
-  play chord(:D, minor)
+  play chord(:D, :minor)
   sleep 0.5
-  play chord(:G, major)
+  play chord(:G, :major)
   sleep 0.5
+end
+
+
+loop do
+  play :C4
+  sleep 0.25
 end
 
 ```
 
-See also this [tutorial](https://sonic-pi.mehackit.org/exercises/en/01-introduction/03-loop-a-melody.html).
+See also  
+- [tutorial (mehackit)](https://sonic-pi.mehackit.org/exercises/en/01-introduction/03-loop-a-melody.html)
+- [tutorial (youtube)](https://www.youtube.com/watch?v=QoeS_fgA2Jw&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=7)
 
 
 ### Songs
@@ -242,25 +285,68 @@ verse()
 
 ```
 
-### Practical Example
+### Notes on Ruby an Sonic Pi 
 
-Checkout the first example folder in the code folder for your first practical example.
+#### Data Structures
+
+Check the ruby code examples for how to create and use **an array** and a **hash data** structure. In Sonic pi, these are complemented with the **ring** structure. Check out [the documentation for the data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi and look into the ring data structure in particular.
+
+#### Methods 
+
+A typical ruby method with parameters:
+```ruby
+
+# Method "repeat" has two method parameters "word" and "times"
+def repeat( word, times ) 
+    puts word * times
+end
+
+```
+
+A typical method call in ruby with arguments. Compare with the chord commands ("methods") from above!
+
+```ruby
+
+# There are two ways to call the methods
+repeat("Hello! ", 3) # => Hello! Hello! Hello!
+repeat "Goodbye! ", 4 # => Goodbye! Goodbye! Goodbye! Goodbye!
+
+```
+
+Methods can also return a value in ruby:
+```ruby
+def hello
+    return "Hello, world!"
+end
+```
+
+### Practical Exercises
+
+Check out some of the Sonic Pi examples in the first session folder in the code folder.
 
 #### Exercise 1
-Open Sonic Pi and play with the introduced commands to playback notes, chords, and simply loops.
+Open Sonic Pi and play with the introduced commands to playback notes, chords, and simple loops. Also, check out the documentation and in particular the following commands:
+
+- clear
+- play_pattern
+- play_pattern_timed
+- shuffle
+- use_bpm
+
+Try to create a few melodies using one or more of these function calls.
 
 #### Exercise 2
-To make the melodies a bit more interesting, change the playback rate by using "**use_bpm**" and set it to 130
+
+Now try to work with chords and chord progressions. Check out the common chord progressions in major and minor from [this site](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html) and create a loop for each chord progression. How do you perceive the different progressions?
  
 ```ruby
 
-use_bpm 130
-
-play 60      # == C4
-sleep 0.25
-play D6      # == 86
-sleep 0.25
-play A3      # == 57
+loop do
+  play chord(:D, :minor)
+  sleep 0.5
+  play chord(:G, :major)
+  sleep 0.5
+end
 
 ```
 #### Exercise 3
@@ -285,13 +371,14 @@ Here, you can also use the "scale" command in conjunction with a specific root n
 
 #### Exercise 4
 
-Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
-
-#### Exercise 5
-
 Pick a song that you like that has a decisive melody and try to figure our the sequence of notes. To figure out the very first (or all) note(s), use this [piano](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html) or this [piano](https://www.apronus.com/music/flashpiano.htm).
 
 Here are some further examples:
 
 - Twinkle, twinkle, little star (starts with "Db4")
+- Hänschen klein (starts with "")
 - 
+
+#### Exercise 5
+
+Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
