@@ -20,7 +20,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Melody](#melody)
   - [Chords](#chords)
   - [Songs](#songs)
-- [Notes on Ruby an Sonic Pi](#notes-on-ruby-an-sonic-pi)
+- [Notes on Ruby and Sonic Pi](#notes-on-ruby-and-sonic-pi)
   - [Symbols / Colon variables](#symbols--colon-variables)
   - [Data Structures](#data-structures)
   - [Methods](#methods)
@@ -79,7 +79,6 @@ See also this [tutorial](https://www.youtube.com/watch?v=DkbEWmg6oI0&list=PLaita
 *Image source: https://sonic-pi.mehackit.org/exercises/en/01-introduction/02-play-a-melody.html*
 
 
-
 ```ruby
 
 play 60      # == C4
@@ -90,10 +89,13 @@ play A3      # == 57
 
 ```
 
-See also this [tutorial](https://www.youtube.com/watch?v=Yy00YaAfFTA&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=3).
+This image relates the letter name keys to the piano keyboard and their corresponding Midi notes:
+
+![keyboard and midi notes](../assets/notes.gif)  
+*Image source: https://usermanuals.finalemusic.com/Finale2012Mac/Content/Finale/MIDI_Note_to_Pitch_Table.htm*
 
 
-You might also use **variables**:
+In Sonic Pi, you can use Midi notes or letter name notes to describe the note that you want to play back. As a programmer, you might also think about using **variables** instead of working with the note names directly:
 
 
 ```ruby
@@ -118,6 +120,14 @@ print mynote
 
 ```
 
+
+**Helpful Links**
+
+- This [Sonic pi tutorial](https://www.youtube.com/watch?v=Yy00YaAfFTA&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=3).  
+- Midi vs letter name notes on the keyboard [web app](https://computermusicresource.com/Keyboard.Notes.html).   
+
+
+
 # Melody, Chords and Songs
 
 Music is strongly based on the harmonic (or disharmonic) interplay of **melody** and **chords**. Melody and chords are usually closely related through **scales**. 
@@ -131,19 +141,47 @@ Most prominent examples of scales in Western music are
 - Major scale (major third and major seventh)
 - Minor scale (minor third and minor seventh)
 
+
 The different intervals are listed below:
 
 1) Root (unison)
 2) Second (minor, major)
 3) Third (minor, major)
-4) Fourth
+4) Fourth 
 5) Fifth 
 6) Sixth (minor, major)
 7) Seventh (minor, major)
-8) Octave
+8) Octave / Root one octave higher
 
+And the chromatic scale that is comprised of all half tone in one intervall steps looks like this:
 
-In ruby, print all scale names with this command:
+0) Root
+1) Minor second
+2) Major second
+3) Minor third
+4) Major third
+5) Fourth
+6) Tritonus
+7) Fifth
+8) Minor Sixth
+9) Major Sixth
+10) Minor Seventh
+11) Major Seventh
+12) Octave
+
+--- 
+
+Both scales are depicted in the following images:
+
+![major scale](../assets/C-Major-Scale.png)  
+*Image source: http://www.masakiokamoto.com/wp-content/uploads/2015/05/C-Major-Scale.png*
+
+![minor scale](../assets/A-minor-Scale.png)  
+*Image source: http://www.masakiokamoto.com/wp-content/uploads/2015/05/A-Minor-Scale.png*
+
+---
+
+In Sonic Pi, print all scale names with this command:
 
 ```ruby
 
@@ -287,7 +325,7 @@ verse()
 
 ```
 
-# Notes on Ruby an Sonic Pi 
+# Notes on Ruby and Sonic Pi 
 
 ## Symbols / Colon variables
 
