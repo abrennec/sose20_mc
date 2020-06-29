@@ -246,6 +246,8 @@ Check also the [Sonic Pi tutorial/documentation on live coding](https://sonic-pi
 
 Guess what: Return to what you have previously coded and combine your beat with your melody and/ or harmonic chord progression. Play around with the concept of live loops and create on example that combines a beat with a melody and chord progression. Make sure that your melody is synced.
 
+Check also this [tutorial](https://www.youtube.com/watch?v=4x7RXApCu6s) which is a complex example on creating a jazz tune with live loops in Sonic pi.
+
 ### Exercise 2
 
 Practice with your example and come up with a small idea for live coding. Just play around with your composition so that you can present it to the group.
