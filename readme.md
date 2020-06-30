@@ -44,70 +44,7 @@ We will use Github to share communications and materials. For this course, you w
 # Overview of the Workshop
 
 1) [Important Notes](scripts/01_important_notes.md)
-2) [Introduction](scripts/02_intro.md)
-   1) What is Computer Music?
-   2) Introduction to SonicPi
-   3) Melody, Chord, Songs
-3) [Synths, Beats, Live_Loops]
-   1) Loops
-   2) Synths 
-   3) Exercise
-      1) eigenes stück erstellen
-4) [Klangcollage mit Samples]
-
-
-5. Synths (was ist das? wie geht das?), noten, parameter, schleifen, samples
-6. Kompositionen
-7. Variablen, FX, Random functions
-8. Freies Arbeiten (klangcollage!)
-9. Freies Arbeiten und Präsentation
-
-- Einstiegsphase: nachprogrammieren eines bekannten stücks
-  - schreiben von melodien anhand eines bekannten stücks erarbeiten
-  - klangcollage mit samples erstellen
-- musikalischer aufbau eines stücks
-- loop basierte starke rythmusorientieret musik
-- 
-
-audio programming & music computing
-- threads
-- i/o devices
-- real time programming
-- sonic pi software components
-
-music theory
-- music theory 
-- midi notes and notes
-- scales, patterns, chords
-- music vs silence
-
-timing, looping, threads
-- bpm
-- play-pattern-timed
-- loops and live loops
-  - zählschleife 3.times do 
-  - endlosschleife loop do 
-  - synchronisiert schleife live_loop :name do
-
-sounds, synths, and FX
-- sounds and synths
-- envelopes
-- effects / FX
-
-beats
-- beats
-- threads
-
-
-
-<!-- - 3 Std waren zu lang, Kinder waren am Ende KO
-- Melodie bauen hat gut funktioniert, auch das Bauen eines Beats, aber als 2 separate Einheiten; eigentlich hätte es gereicht, wenn ein Teil der Kinder weiter an ihrer Melodie hätte feilen können und ein paar andere Kinder hätten gerne noch neue Sachen dazugelernt
-- zunächst vlt stärker Noten, Midi-Noten und den Zusammenhang erklären an Beispielen (Noten & Midi-Noten nebeneinander, Hänschen Klein, etc.)
-- dann mit "play 60" und "sleep" spielen und genau erklären, was ist play 60 und was ist sleep (1/4 .. bpm .. etc)
-- dann "play\_pattern\_timed" einführen und kommentare und so eine Liedstruktur erstellen
-- dann schleifen und wiederholungen und ganz wichtig die klangveränderungen über attack, decay, sustain, release
-- verschiedene synths vorstellen, auch schon beispiele bereitstellen
-- weitere themen wären dann
-- samples und beats bauen
-- threads und parallele strukturen (drums, bass melodie, lead melodie ...)
-- diese punkte aber eher für fortgeschrittene Kinder -->
+2) [Music Computing with Sonic Pi](scripts/02_intro.md)
+3) [Creating Beats and Adding Rhythm](scripts/03_beats.md)
+4) [Tweaking Sounds](scripts/03_beats.md)
+5) [Freestyle Composition](scripts/05_composition.md)
