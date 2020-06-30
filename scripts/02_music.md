@@ -176,7 +176,7 @@ Both scales are depicted in the following images:
 ![major scale](../assets/C-Major-Scale.png)  
 *Image source: http://www.masakiokamoto.com/wp-content/uploads/2015/05/C-Major-Scale.png*
 
-![minor scale](../assets/A-minor-Scale.png)  
+![minor scale](../assets/A-Minor-Scale.png)  
 *Image source: http://www.masakiokamoto.com/wp-content/uploads/2015/05/A-Minor-Scale.png*
 
 ---
