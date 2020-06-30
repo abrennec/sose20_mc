@@ -29,6 +29,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Exercise 2](#exercise-2)
   - [Exercise 3](#exercise-3)
   - [Exercise 4](#exercise-4)
+  - [Exercise 5](#exercise-5)
 
 
 # What is Computer Music?
@@ -494,3 +495,7 @@ Here are some further examples:
 - [The White Stripes](https://www.youtube.com/watch?v=0J2QdDbelmY) (starts with "E3")
 
 Check out the file satisfaction_riff.rb in the code folder and listen to the [song on youtube](https://www.youtube.com/watch?v=OZ8GZ3PFVGM). Try to figure out the riff and change it such it sounds similar to the song.
+
+## Exercise 5
+
+Pick a song of your liking and try to implement one melody part of it with Sonic Pi.
