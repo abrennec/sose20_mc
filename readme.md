@@ -43,8 +43,8 @@ We will use Github to share communications and materials. For this course, you w
 
 # Overview of the Workshop
 
-1) [Important Notes](scripts/01_important_notes.md)
-2) [Music Computing with Sonic Pi](scripts/02_intro.md)
-3) [Creating Beats and Adding Rhythm](scripts/03_beats.md)
-4) [Tweaking Sounds](scripts/03_beats.md)
+1) [Important Notes](scripts/01_important.md)
+2) [Music Computing with Sonic Pi](scripts/02_music.md)
+3) [Creating Beats and Adding Rhythm](scripts/03_beat.md)
+4) [Tweaking Sounds](scripts/04_sound.md)
 5) [Freestyle Composition](scripts/05_composition.md)
