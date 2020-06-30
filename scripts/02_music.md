@@ -189,6 +189,20 @@ puts scale_names
 
 ```
 
+Check out the next code example to listen to the different scales Sonic Pi supports and implements. In the example, a major scale is created that starts at root note "60", and that spans over 4 octaves. The method call "tick" simply iterates over the scale in a sequential order:
+
+```ruby
+
+myScale = scale 60, :major, num_octaves: 4
+
+
+loop do
+  play myScale.tick, release: 0.1
+  sleep 0.25
+end
+
+```
+
  Let's find out with an [interactive example](https://sonic-pi.mehackit.org/exercises/en/09-keys-chords-and-scales/01-piano.html).
 
 ## Melody
@@ -341,7 +355,23 @@ play (scale :c3, :major)
 
 ## Data Structures
 
-Check the ruby code examples for how to create and use **an array** and a **hash data** structure. In Sonic pi, these are complemented with the **ring** structure. Check out [the documentation for the data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi and look into the ring data structure in particular.
+Check the [ruby code examples](../code/ruby_language_nutshell) for how to create and use **an array** and a **hash data** structure. 
+
+In Sonic pi, these data structures are complemented with the **ring** structure. Check out [the documentation for the data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi and look into the ring data structure in particular. It is illustrated in this code example and implements an array whose elements can be accessed following an endless ring-like concept: 
+
+```ruby
+
+# Ring structure that is simply iterated using the tick method
+# You can see the additional parameter "release" that is handed over
+# to the play method. We will learn about the additional parameters
+# later on. release is used to specify how long the note will be played back. 
+
+loop do
+  play (ring 60, 62, 64, 65, 67, 69, 71, 72).tick, release: 0.1
+  sleep 0.25
+end
+
+```
 
 ## Methods 
 
@@ -384,6 +414,8 @@ Open Sonic Pi and play with the introduced commands to playback notes, chords, a
 - play_pattern_timed
 - shuffle
 - use_bpm
+- tick
+- choose
 
 Try to create a few melodies using one or more of these function calls.
 
@@ -397,6 +429,24 @@ play_pattern (ring 56, 67, 89)
 play_pattern [56, 67, 89]
 
 ```
+
+Also, take a look at the different scales that you can use with Sonic Pi:
+
+```ruby
+
+myScale = scale 60, :major, num_octaves: 4
+
+use_bpm 65
+
+loop do
+  play myScale.tick, release: 0.1
+  #play myScale.choose, release: 0.1
+  sleep 0.25
+end
+
+```
+
+
 See also the [section on data structures](https://sonic-pi.net/tutorial.html#section-8) used in Sonic pi.
 
 ## Exercise 2

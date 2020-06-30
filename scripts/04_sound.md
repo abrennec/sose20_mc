@@ -18,11 +18,12 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
       - [Sampling Envelopes](#sampling-envelopes)
     - [Further Sound Parameters](#further-sound-parameters)
   - [Practical Exercises](#practical-exercises)
-    - [Example 1](#example-1)
-    - [Example 2](#example-2)
+    - [Exercise 1](#exercise-1)
+    - [Exercise 2](#exercise-2)
 - [FX](#fx)
   - [Practical Exercises](#practical-exercises-1)
-    - [Example 1](#example-1-1)
+    - [Exercise 1](#exercise-1-1)
+    - [Exercise 2](#exercise-2-1)
 
 # Tweaking Sounds
 
@@ -130,25 +131,26 @@ In the Sonic Pi help window you can find an overview of all synths and samples t
 
 With the synths packs, it is mostly envelope parameters that can be changed. There is however one other parameter that is of interest:
 
-- cutoff
-- mod_: modulation parameters
+- **cutoff**: Midi note, represents highest frequencies allowed to be present in the sound
+- **mod_**: modulation parameters
 
 With the sample packs, there are many other parameters of interest. For example, check out the following parameters:
 
-- amp
-- pan
-- rate
-- start
-- finish
-- pitch
+- **amp**: amplitude
+- **pan**: position in stereo image
+- **rate**: play back rate
+- **start**: value between 0 and 1 that represents the starting point of sample for play back (0 start of sample, 1 end of sample)
+- **finish**: same as "start:" but for defining the stop of play back 
+- **pitch**: as the name suggests : ) pitch adjustment of the sample in semitones spanning over two octaves above and below the sample
+- **onset**: feature detection on the sample, see example below
 
 A very interesting functionality is provided by **onset** parameter. This option does a feature detection on the wave file and stores all significantly different features (mostly used with drum loops) in a list. You can pick from that list and create a unique sampled beat:
 
 ```ruby
 
 live_loop :jungle do
- sample :loop_amen, onset: pick
- sleep 0.125
+  sample :loop_amen, onset: pick # use 0, 1, 2, 3 ... instead of pick
+  sleep 0.125
 end
 
 ```
@@ -160,16 +162,70 @@ Some notes on onset from the Sonic Pi documentation:
 
 ## Practical Exercises
 
-### Example 1
+### Exercise 1
 
-### Example 2
+Go to the code examples in the folder session_03 of the code folder and review / replay the examples. Change the examples and make use of the envelope as well as of the sound parameters described in this section. Come up with your own variations and get familiar with the different sound parameters.
 
+### Exercise 2
 
+Go back to the track that you have developed in the previous session on beats. The track was intended to be composed of classical sound elements (drum samples and chord progressions). Now use it as a basis for an electronic track and change the synths and samples you used with other elements from Sonic Pi. For example, make use of the loop_ samples and the onset function in order to create an interesting beat. Or, play around and specify different synths using the envelope parameters.
+
+Take another listen to the music examples we listened to at the beginning of this session. Try to identify certain elements that you may have used in the code yourselves and/or that you would like to implement. What exactly would you like to implement yourselves? How did you approach your ideas?
 
 # FX
 
+Audio FX (or effects) are very central elements to further modify the sound of individual components as well as the overall sound of the song. FX are often used in traditional mixing workflows to create a spatial arrangement of the different instruments, for example. The topic of audio FX is a huge field of research and application. Here we will simply listen to a few common FXs and how they will affect your song and track. The following code examples will be discussed in class:
+
+```ruby
+
+with_fx :echo, phase: 0.4, decay: 4, mix: 0.75 do
+  
+  play (ring 60).tick
+  
+end
+
+```
+
+```ruby
+
+with_fx :reverb, room: 0.3 do
+  
+  9.times do
+    play (ring 60, 62, 64).tick
+    sleep 0.25
+  end
+  
+end
+
+```
+
+```ruby
+
+with_fx :distortion, distort: 0.7 do
+  
+  9.times do
+    play (ring 60, 62, 64).tick
+    sleep 0.25
+  end
+  
+end
+
+```
+
+FX can well be integrated into a musical piece in order to add a certain mood or to add a certain depth of the musical instruments and / or components. For instance, echo and reverb can be added to a specific instrument or component in order to create an impression of depth (an instrument far away) or closeness (an instrument close to the listener). Listen to the following examples to get an impression of what is meant by this:
+
+
+
+Sonic Pi provides a large list of audio FX that can be used and experimented with and it will be your task now to explore and play with some of the FX. In particular, check out the following FX
+
+See also this [tutorial](https://www.youtube.com/watch?v=G1L2gAyfohw&list=PLaitaNxyd8SHvTQjRGnMdKLsARXW7iYyp&index=13).
+
 ## Practical Exercises
 
-### Example 1
+### Exercise 1
 
-Check out the coding example folder for session 02 
+Check out the Sonic Pi documentation on FX and play around with the FX presented in this session as well as in the documentation. Select one or two FX and add the to your song to enhance the sounds.
+
+### Exercise 2
+
+Sonic Pi also provides the feature of recording. Once you have finalized your music computing experiments, press record and produce your first song with Sonic Pi.
